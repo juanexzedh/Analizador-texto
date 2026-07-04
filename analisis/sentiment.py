@@ -1,0 +1,2 @@
+from textblob import TextBlob
+from deep_translator import GoogleTranslator
