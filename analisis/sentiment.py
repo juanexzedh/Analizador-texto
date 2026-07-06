@@ -9,7 +9,7 @@ def analizador_sentimiento(texto):
     sub = analisis.sentiment.subjectivity
     if pol >= 0.2:
         clasificacion = "Positivo"
-    elif pol <= 0.2:
+    elif pol <= -0.2:
         clasificacion = "Negativo"
     else:
         clasificacion = "Neutro"
