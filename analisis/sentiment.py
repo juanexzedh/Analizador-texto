@@ -15,11 +15,5 @@ def analizador_sentimiento(texto):
         clasificacion = "Neutro"
 
     resultados = {"score": pol, "clasificacion": clasificacion, "sub": sub}
-
-    print(f"Texto: {traduccion}")
-    print(f"Polaridad: {pol}")
-    print(f"Subjetividad: {sub}")
-    print(f"Clasificacion: {clasificacion}")
-
     return resultados
     
