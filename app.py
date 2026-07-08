@@ -24,6 +24,7 @@ texto = st.text_area(
 if st.button("Analizar"):
 
     with st.spinner("Analizando texto..."):
+        
         # Validaciones
         if not texto.strip():
             st.warning("Debe ingresar un texto para realizar el análisis.")
@@ -46,6 +47,7 @@ if st.button("Analizar"):
             resumen = resumir_texto(texto)
             with tab1:
                 st.subheader("Resumen")
+                st.caption(f"Palabras analizadas: {len(palabras)}")
                 st.write(resumen)
 
         #Sentimiento
@@ -53,10 +55,17 @@ if st.button("Analizar"):
         with tab2:
             st.subheader("Análisis de sentimiento")
             st.metric("Clasificación", sentimiento["clasificacion"])
-            st.write(f"Polaridad: {sentimiento['score']:.2f}")
-            st.progress(sentimiento['score'])
+
+            score = sentimiento["score"]
+            if score > 0.2:
+                st.success(f"😊 Polaridad: {score:.2f}")
+            elif score < -0.2:
+                st.error(f"😞 Polaridad: {score:.2f}")
+            else:
+                st.warning(f"😐 Polaridad: {score:.2f}")
+
             st.write(f"Subjetividad: {sentimiento['sub']:.2f}")
-            st.progress(sentimiento['sub'])
+            st.progress(sentimiento["sub"])
 
         #Palabras Clave
         top10 = obtener_keywords(texto)

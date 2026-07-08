@@ -1,0 +1,8 @@
+streamlit
+matplotlib
+pandas
+textblob
+deep-translator
+sumy
+nltk
+wordcloud
