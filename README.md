@@ -11,12 +11,6 @@ El usuario puede ingresar cualquier texto (artículos, reseñas, opiniones, come
 
 ---
 
-## Vista previa
-
-> *(Aquí puedes agregar una captura de pantalla cuando subas el proyecto.)*
-
----
-
 ## Características
 
 - Análisis de sentimiento utilizando **TextBlob**
