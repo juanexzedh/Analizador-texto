@@ -161,6 +161,6 @@ Este proyecto permitió poner en práctica:
 
 ## Autor
 
-Desarrollado por **Tu Nombre**
+Desarrollado por **Juan Esteban Hernandez**
 
 Proyecto realizado con fines de aprendizaje y portafolio.
